@@ -160,4 +160,3 @@ class Plugin {
 	}
 	
 }
-new Plugin();
