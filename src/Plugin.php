@@ -12,8 +12,17 @@ class Plugin {
 		add_action( 'add_meta_boxes', array($this, 'yoast_is_toast'), 99 );
 		add_action( 'init', array($this,'taxonomy'), 0 );
 		add_action( 'widgets_init', array($this, 'loadWidget'));
+		$this->check_for_update();
 	}
 
+	function check_for_update() {
+		$myUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
+			'https://github.com/fredbradley/upfrontmama-loves/',
+			__FILE__,
+			'upfrontmama-loves'
+		);
+	}
+	
 	function loadWidget() {
 		return register_widget(new Widget());
 	}
@@ -151,3 +160,4 @@ class Plugin {
 	}
 	
 }
+new Plugin();
