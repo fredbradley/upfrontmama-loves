@@ -1,0 +1,19 @@
+{
+    "name": "fredbradley/upfrontmama-loves",
+    "description": "A custom package for Nicola",
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^4.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fred Bradley",
+            "email": "hello@fredbradley.co.uk"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+			"UpfrontMama\\Loves\\": "src"
+		}
+	}
+}
