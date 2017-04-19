@@ -13,6 +13,7 @@ class Plugin {
 		add_action( 'init', array($this,'taxonomy'), 0 );
 		add_action( 'widgets_init', array($this, 'loadWidget'));
 		$this->check_for_update();
+		new VisualComposer();
 	}
 
 	function check_for_update() {
@@ -78,10 +79,10 @@ class Plugin {
 	
 		$labels = array(
 			'name'                  => _x( 'Upfront Mama Loves', 'Must Have Item General Name', 'upfrontmama' ),
-			'singular_name'         => _x( 'Must Have Item', 'Must Have Item Singular Name', 'upfrontmama' ),
+			'singular_name'         => _x( 'Shop Item', 'Must Have Item Singular Name', 'upfrontmama' ),
 			'menu_name'             => __( 'Upfront Mama Loves', 'upfrontmama' ),
-			'name_admin_bar'        => __( 'Must Have Item', 'upfrontmama' ),
-			'archives'              => __( 'Item Archives', 'upfrontmama' ),
+			'name_admin_bar'        => __( 'Shop Item', 'upfrontmama' ),
+			'archives'              => __( 'Shop Item Archives', 'upfrontmama' ),
 			'attributes'            => __( 'Item Attributes', 'upfrontmama' ),
 			'parent_item_colon'     => __( 'Parent Item:', 'upfrontmama' ),
 			'all_items'             => __( 'All Items', 'upfrontmama' ),
@@ -106,8 +107,8 @@ class Plugin {
 			'filter_items_list'     => __( 'Filter items list', 'upfrontmama' ),
 		);
 		$args = array(
-			'label'                 => __( 'Must Have Item', 'upfrontmama' ),
-			'description'           => __( 'Must Have Item Description', 'upfrontmama' ),
+			'label'                 => __( 'Upfront Mama Loves', 'upfrontmama' ),
+			'description'           => __( 'Things for the shop', 'upfrontmama' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title', 'excerpt', 'thumbnail', 'page-attributes', ),
 			'hierarchical'          => false,
