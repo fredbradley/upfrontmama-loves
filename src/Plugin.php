@@ -2,6 +2,8 @@
 
 namespace UpfrontMama\Loves;
 
+use Puc_v4_Factory;
+
 class Plugin {
 	protected $post_type_key = "upfrontmamaloves";
 	
@@ -17,7 +19,7 @@ class Plugin {
 	}
 
 	function check_for_update() {
-		$myUpdateChecker = \Puc_v4_Factory::buildUpdateChecker(
+		$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 			'https://github.com/fredbradley/upfrontmama-loves/',
 			__FILE__,
 			'upfrontmama-loves'
