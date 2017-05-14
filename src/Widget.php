@@ -66,7 +66,7 @@ class Widget extends \WP_Widget {
 		while($query->have_posts()): $query->the_post();
 		?>
 			<li>			
-				<a href="<?php echo get_permalink(); ?>">
+				<a href="<?php echo get_post_meta(get_the_ID(), 'ufm_loves_url', true); ?>">
 					<?php
 						$thumbnail = get_the_post_thumbnail_url( get_the_ID(), 'pipdig-mosaic' );
 						?>
