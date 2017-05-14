@@ -3,7 +3,7 @@
 Plugin Name: Upfront Mama Upfront Mama Loves
 Description: A Upfront Mama Loves Custom Must Have Item for Nicola
 Author: Fred Bradley
-Version: 1.3.4
+Version: 1.3.5
 Author URI: http://fred.im/
 */
 namespace UpfrontMama\Loves;

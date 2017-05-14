@@ -21,7 +21,7 @@ class Plugin {
 	function check_for_update() {
 		$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 			'https://github.com/fredbradley/upfrontmama-loves/',
-			__FILE__,
+			dirname(dirname(__FILE__)).'/load.php',
 			'upfrontmama-loves'
 		);
 	}
